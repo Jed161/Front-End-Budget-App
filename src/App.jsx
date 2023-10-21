@@ -1,5 +1,7 @@
 // DEPENDENCIES
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+/* src/index.css */
+import 'bootstrap/dist/css/bootstrap.css';
 
 // PAGES
 import Edit from "./Pages/Edit";
