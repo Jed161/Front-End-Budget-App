@@ -19,9 +19,9 @@ function BudgetNewForm() {
       setBudget({...budget, [e.target.id]: e.target.value});
     };
 
-    const handleCheckboxChange = () => {
+    /*const handleCheckboxChange = () => {
         setBudget({...budget, amount: !budget.amount});
-    };
+    };*/
 
     const addBudget = () => {
 
