@@ -1,0 +1,4 @@
+.form-group {
+    border: 20px solid #000; /* Add the border with 20px width */
+    padding: 20px; /* Add 20px of padding inside the box */
+  }

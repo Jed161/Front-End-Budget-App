@@ -52,66 +52,88 @@ function BudgetNewForm() {
         e.preventDefault();
         addBookmark();
       };
+
       return (
-        <div className="New">
-          {/* this is what we DO when the form is submitted */}
+        <div className="custom-form-box">
           <form onSubmit={handleSubmit}>
-            <label htmlFor="id">Number:</label>
-            <input
-              id="id"
-              value={budget.id}
-              type="number"
-              onChange={ handleTextChange }
-              placeholder="Number of id"
-            />
-            <label htmlFor="itemName">Name:</label>
-            <input
-              id="itemName"
-              type="text"
-              value={budget.itemName}
-              placeholder="Name of item"
-              onChange={handleTextChange}
-            />
-            <label htmlFor="amount">Amount:</label>
-            <input
-              id="amount"
-              type="number"
-              value={budget.amount}
-              onChange={handleTextChange}
-              placeholder="how much"
-            />
-            <label htmlFor="date">Date:</label>
-            <input
-              id="date"
-              type="number"
-              value={budget.date}
-              onChange={handleTextChange}
-              placeholder="Due date"
-            />
-            <label htmlFor="from">From</label>
-            <input
-            id="from"
-            type="text"
-            value={budget.from}
-            onChange={handleTextChange}
-            placeholder="name of credit card"
-            />
-            <label htmlFor="category">Category:</label>
-            <input
-              id="category"
-              type="text"
-              name="category"
-              value={budget.category}
-              placeholder="bill, personal expenses"
-              onChange={handleTextChange}
-            />
-            <br />
-            <input type="submit" />
+            <div className="form-group">
+              <label htmlFor="id">Number:</label>
+              <input
+                id="id"
+                className="form-control"
+                value={budget.id}
+                type="number"
+                onChange={handleTextChange}
+                placeholder="Number of id"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="itemName">Name:</label>
+              <input
+                id="itemName"
+                className="form-control"
+                type="text"
+                value={budget.itemName}
+                placeholder="Name of item"
+                onChange={handleTextChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="amount">Amount:</label>
+              <input
+                id="amount"
+                className="form-control"
+                type="number"
+                value={budget.amount}
+                onChange={handleTextChange}
+                placeholder="how much"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="date">Date:</label>
+              <input
+                id="date"
+                className="form-control"
+                type="number"
+                value={budget.date}
+                onChange={handleTextChange}
+                placeholder="Due date"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="from">From:</label>
+              <input
+                id="from"
+                className="form-control"
+                type="text"
+                value={budget.from}
+                onChange={handleTextChange}
+                placeholder="name of credit card"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="category">Category:</label>
+              <select
+                id="category"
+                className="form-control"
+                name="category"
+                value={budget.category}
+                onChange={handleTextChange}
+              >
+                <option value="bill">Bill</option>
+                <option value="personal">Personal Expenses</option>
+                {/* Add more options as needed */}
+              </select>
+            </div>
+            <div className="form-group">
+              <input type="submit" className="btn btn-primary" />
+            </div>
           </form>
         </div>
       );
-    
-    
 }
+    
+    
+
 
 export default BudgetNewForm;
